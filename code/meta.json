@@ -2,19 +2,19 @@
   "transformations": [
     {
       "file": "./code/code.js",
-      "name": "Transformation 1",
+      "name": "Transformation1",
       "description": "Description 1",
       "test-input-file": "./code/events.json",
       "expected-output": "./code/expected.json"
     },
     {
       "file": "./code/code_2.js",
-      "name": "Transformation 2",
+      "name": "Transformation2",
       "description": "Description 2"
     },
     {
       "file": "./code/code_3.js",
-      "name": "Transformation 3",
+      "name": "Transformation3",
       "description": "Description 3"
     }
   ],
