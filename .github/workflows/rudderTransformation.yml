@@ -18,7 +18,7 @@ jobs:
         with:
           ref: ${{ github.ref }}
       - name: Rudder Transformation Action
-        uses: ./
+        uses: rudderlabs/rudder-transformation-action@1.0.1
         with:
           metaPath: './code/meta.json'
           email: 'siva.shanmukh@rudderstack.com'
