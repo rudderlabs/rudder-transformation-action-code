@@ -16516,7 +16516,7 @@ async function testAndPublish() {
       }
 
       let apiOutput = successResults[i].result.output.transformedEvents;
-      core.info(JSON.stringify(apiOutput,null,2))
+      core.info("APIOUTPUT" + JSON.stringify(apiOutput,null,2))
 
       let transformationName =
         _.camelCase(transformationDict[transformerVersionID].name);
@@ -16540,7 +16540,7 @@ async function testAndPublish() {
       let expectedOutput = expectedOutputfile
         ? JSON.parse(fs.readFileSync(expectedOutputfile))
         : "";
-      core.info(JSON.stringify(expectedOutput,null,2))
+      core.info("Expected Output" + JSON.stringify(expectedOutput,null,2))
       if (expectedOutput == "") {
         continue;
       }
