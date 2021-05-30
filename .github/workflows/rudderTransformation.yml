@@ -22,6 +22,5 @@ jobs:
         with:
           metaPath: './code/meta.json'
           email: 'siva.shanmukh@rudderstack.com'
-          accessToken: ${{ secrets.ACCESS_TOKEN_DEV }}
-          serverEndpoint: 'https://api.dev.rudderlabs.com'
+          accessToken: ${{ secrets.ACCESS_TOKEN }}
           uploadTestArtifact: true
