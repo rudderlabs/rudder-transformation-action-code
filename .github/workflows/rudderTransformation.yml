@@ -15,7 +15,7 @@ jobs:
       TEST_ONLY: ${{ github.event_name != 'push' }}
       METAPATH: './code/meta.json'
       SUFFIX: 'Staging' # Should start with alphabet
-      STAGE: 'staging'
+      STAGE: 'prod'
     steps:
       - uses: actions/checkout@v2
         with:
