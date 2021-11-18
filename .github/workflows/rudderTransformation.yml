@@ -21,6 +21,13 @@ jobs:
         run: |
             trfiles=$( jq -r '.transformations[].file' ./code/meta.json ) && libnames=$( jq -r '.libraries[].name' ./code/meta.json ) && staging=_staging
             echo "$trfiles $libnames"
+            for name in $(echo "$libnames"); do
+              for file in $(echo "$trfiles"); do
+                echo "$name $file"
+                sed -i '' "s/$name/$name$staging/g" "$file"
+              done
+            done
+            jq '.libraries[].name += "_staging"' ./code/meta.json > "tmp" && mv "tmp" ./code/meta.json
       - name: Rudder Transformation Action
         uses: rudderlabs/rudder-transformation-action@1.0.1
         with:
