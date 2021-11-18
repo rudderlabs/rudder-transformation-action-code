@@ -13,7 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       TEST_ONLY: ${{ github.event_name != 'push' }}
-      metapath: ./code/meta.json
+      METAPATH: './code/meta.json'
+      SUFFIX: 'Staging' # Should start with alphabet
 
     steps:
       - uses: actions/checkout@v2
@@ -21,7 +22,7 @@ jobs:
           ref: ${{ github.ref }}
       - name: Extract library names and transformation files
         run: |
-            trfiles=$( jq -r '.transformations[].file' ./code/meta.json ) && libnames=$( jq -r '.libraries[].name' ./code/meta.json ) && staging=Staging
+            trfiles=$( jq -r '.transformations[].file' ${{ env.METAPATH }} ) && libnames=$( jq -r '.libraries[].name' ${{ env.METAPATH }} ) && staging=Staging
             echo "$trfiles $libnames"
             for name in $(echo "$libnames"); do
               for file in $(echo "$trfiles"); do
@@ -33,7 +34,7 @@ jobs:
       - name: Rudder Transformation Action
         uses: rudderlabs/rudder-transformation-action@1.0.1
         with:
-          metaPath: './code/meta.json'
+          metaPath: ${{ env.METAPATH }}
           email: 'jayachand@rudderstack.com'
           accessToken: '215P2A2DgKOrWT2dKytPpZiour1'
           uploadTestArtifact: true
