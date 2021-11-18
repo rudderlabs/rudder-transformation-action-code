@@ -19,7 +19,7 @@ jobs:
           ref: ${{ github.ref }}
       - name: Extract library names and transformation files
         run: |
-            trfiles=$( jq -r '.transformations[].file' ./code/meta.json ) && libnames=$( jq -r '.libraries[].name' ./code/meta.json ) && staging=_staging
+            trfiles=$( jq -r '.transformations[].file' ./code/meta.json ) && libnames=$( jq -r '.libraries[].name' ./code/meta.json ) && staging=Staging
             echo "$trfiles $libnames"
             for name in $(echo "$libnames"); do
               for file in $(echo "$trfiles"); do
