@@ -24,7 +24,7 @@ jobs:
             for name in $(echo "$libnames"); do
               for file in $(echo "$trfiles"); do
                 echo "$name $file"
-                sed -i '' "s/$name/$name$staging/g" "$file"
+                sed -i "s/$name/$name$staging/g" "$file"
               done
             done
             jq '.libraries[].name += "_staging"' ./code/meta.json > "tmp" && mv "tmp" ./code/meta.json
