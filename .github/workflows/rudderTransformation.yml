@@ -18,7 +18,6 @@ jobs:
         with:
           ref: ${{ github.ref }}
       - name: Extract library names and transformation files
-        uses: sergeysova/jq-action@v2
         run: |
             trfiles=$( jq -r '.transformations[].file' ./code/meta.json ) && libnames=$( jq -r '.libraries[].name' ./code/meta.json ) && staging=_staging
             echo "$trfiles $libnames"
