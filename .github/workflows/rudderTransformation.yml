@@ -17,10 +17,15 @@ jobs:
       - uses: actions/checkout@v2
         with:
           ref: ${{ github.ref }}
+      - name: Extract library names and transformation files
+        uses: sergeysova/jq-action@v2
+        run: |
+            trfiles=$( jq -r '.transformations[].file' ./code/meta.json ) && libnames=$( jq -r '.libraries[].name' ./code/meta.json ) && staging=_staging
+            echo "$trfiles $libnames"
       - name: Rudder Transformation Action
         uses: rudderlabs/rudder-transformation-action@1.0.1
         with:
           metaPath: './code/meta.json'
-          email: 'siva.shanmukh@rudderstack.com'
-          accessToken: ${{ secrets.ACCESS_TOKEN }}
+          email: 'jayachand@rudderstack.com'
+          accessToken: '215P2A2DgKOrWT2dKytPpZiour1'
           uploadTestArtifact: true
