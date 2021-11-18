@@ -15,12 +15,13 @@ jobs:
       TEST_ONLY: ${{ github.event_name != 'push' }}
       METAPATH: './code/meta.json'
       SUFFIX: 'Staging' # Should start with alphabet
-
+      STAGE: 'staging'
     steps:
       - uses: actions/checkout@v2
         with:
           ref: ${{ github.ref }}
       - name: Extract library names and transformation files
+        if: ${{ env.STAGE == 'staging' }}
         run: |
             trfiles=$( jq -r '.transformations[].file' ${{ env.METAPATH }} ) && libnames=$( jq -r '.libraries[].name' ${{ env.METAPATH }} ) && suffix=${{ env.SUFFIX }}
             echo "$trfiles $libnames"
