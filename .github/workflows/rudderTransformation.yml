@@ -21,6 +21,6 @@ jobs:
         uses: rudderlabs/rudder-transformation-action@1.0.1
         with:
           metaPath: './code/meta.json'
-          email: 'siva.shanmukh@rudderstack.com'
+          email: 'pierre-yves@fatmap.com'
           accessToken: ${{ secrets.ACCESS_TOKEN }}
           uploadTestArtifact: true
