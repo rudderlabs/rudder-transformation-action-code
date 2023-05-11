@@ -7,4 +7,3 @@ export function getRevenue(finance) {
 export function getProfit(finance) {
   return getPrice(finance) - getRevenue(finance);
 }
-//a change
