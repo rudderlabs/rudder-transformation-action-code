@@ -18,13 +18,13 @@
     },
     {
       "file": "./code/code_2.py",
-      "name": "Fail Transformation 1",
+      "name": "Success TR 1",
       "description": "Description 2",
       "language": "pythonfaas"
     },
     {
       "file": "./code/code_2.py",
-      "name": "Fail Transformation 2",
+      "name": "Success TR 2",
       "description": "Description 2",
       "language": "pythonfaas"
     },
@@ -36,10 +36,9 @@
     },
     {
       "file": "./code/code_3.js",
-      "name": "Transformation3",
+      "name": "Success TR 3",
       "description": "Description 3",
       "language": "javascript",
-      "test-input-file": "./code/events.json",
       "expected-output": "./code/expected.json"
     }
   ],
