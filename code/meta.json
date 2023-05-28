@@ -18,13 +18,13 @@
     },
     {
       "file": "./code/code_2.py",
-      "name": "Success TR 1",
+      "name": "SuccessTR1",
       "description": "Description 2",
       "language": "pythonfaas"
     },
     {
       "file": "./code/code_2.py",
-      "name": "Success TR 2",
+      "name": "SuccessTR2",
       "description": "Description 2",
       "language": "pythonfaas"
     },
