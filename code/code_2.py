@@ -8,5 +8,5 @@ def transformEvent(event, metadata):
     "profit": getProfit(event.get("properties", {})),
     "city": getCity(event.get("context", {}).get("address", {})),
     "country": getCountry(event.get("context", {}).get("address", {})),
-    "street": getStreet(event.get("context", {}).get("address", {}))
+    "street": unknownFunc(event.get("context", {}).get("address", {}))
   }
