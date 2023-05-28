@@ -1,3 +1,3 @@
-export function transformEvent(events) {
-  return events;
+export function transformEvent(event, metadata) {
+  return event;
 }

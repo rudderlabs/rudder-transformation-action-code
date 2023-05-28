@@ -1,12 +1,12 @@
 # Sample repo using RudderStack Transformation Action
 
-##Breaking down the [rudderTransformation.yml](https://github.com/rudderlabs/rudder-transformation-action-code/tree/main/.github/workflows/rudderTransformation.yml)
+## Breaking down the [rudderTransformation.yml](https://github.com/rudderlabs/rudder-transformation-action-code/tree/main/.github/workflows/rudderTransformation.yml)
 
 ```jsx
 name: Publish Transformations to Rudder workspace
 ```
 
-on: This is used to define triggers on which you want to run the action.
+on: This keyword is used to define triggers on which you want to run the action. Here job gets triggered on push and pull request events on main branch.
 ```jsx
 on: 
   push:

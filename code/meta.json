@@ -4,30 +4,49 @@
       "file": "./code/code.js",
       "name": "Transformation1",
       "description": "Description 1",
+      "language": "javascript",
       "test-input-file": "./code/events.json",
       "expected-output": "./code/expected.json"
     },
     {
-      "file": "./code/code_2.js",
+      "file": "./code/code_2.py",
       "name": "Transformation2",
-      "description": "Description 2"
+      "description": "Description 2",
+      "language": "pythonfaas",
+      "test-input-file": "./code/events.json",
+      "expected-output": "./code/expected.json"
     },
     {
       "file": "./code/code_3.js",
       "name": "Transformation3",
-      "description": "Description 3"
+      "description": "Description 3",
+      "language": "javascript"
     }
   ],
   "libraries": [
     {
       "file": "./code/lib1.js",
       "name": "getFinanceData",
-      "description": "Description 1"
+      "description": "javascript library to get finance data",
+      "language": "javascript"
     },
     {
       "file": "./code/lib2.js",
       "name": "getUserAddress",
-      "description": "Description 2"
+      "description": "javascript library to get user address",
+      "language": "javascript"
+    },
+    {
+      "file": "./code/lib3.py",
+      "name": "getFinanceDataPy",
+      "description": "python library to get finance data",
+      "language": "pythonfaas"
+    },
+    {
+      "file": "./code/lib4.py",
+      "name": "getUserAddressPy",
+      "description": "python library to get user address",
+      "language": "pythonfaas"
     }
   ]
 }
