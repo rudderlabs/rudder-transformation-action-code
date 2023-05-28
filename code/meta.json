@@ -17,29 +17,10 @@
       "expected-output": "./code/expected.json"
     },
     {
-      "file": "./code/code_2.py",
-      "name": "SuccessTR1",
-      "description": "Description 2",
-      "language": "pythonfaas"
-    },
-    {
-      "file": "./code/code_2.py",
-      "name": "SuccessTR2",
-      "description": "Description 2",
-      "language": "pythonfaas"
-    },
-    {
       "file": "./code/code_3.js",
       "name": "Transformation3",
       "description": "Description 3",
       "language": "javascript"
-    },
-    {
-      "file": "./code/code_3.js",
-      "name": "Success TR 3",
-      "description": "Description 3",
-      "language": "javascript",
-      "expected-output": "./code/expected.json"
     }
   ],
   "libraries": [
