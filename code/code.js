@@ -6,8 +6,8 @@ export function transformEvent(event, metadata) {
     revenue: getRevenue(event.properties || {}),
     price: getPrice(event.properties || {}),
     profit: getProfit(event.properties || {}),
-    city: getCity(event.context?.address || {}),
-    country: getCountry(event.context?.address || {}),
-    street: getStreet(event.context?.address || {}),
+    city: getCity(event.context?.traits?.address || {}),
+    country: getCountry(event.context?.traits?.address || {}),
+    street: getStreet(event.context?.traits?.address || {}),
   };
 }
