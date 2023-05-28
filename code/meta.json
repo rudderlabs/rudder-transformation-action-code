@@ -17,10 +17,30 @@
       "expected-output": "./code/expected.json"
     },
     {
+      "file": "./code/code_2.py",
+      "name": "Fail Transformation 1",
+      "description": "Description 2",
+      "language": "pythonfaas"
+    },
+    {
+      "file": "./code/code_2.py",
+      "name": "Fail Transformation 2",
+      "description": "Description 2",
+      "language": "pythonfaas"
+    },
+    {
       "file": "./code/code_3.js",
       "name": "Transformation3",
       "description": "Description 3",
       "language": "javascript"
+    },
+    {
+      "file": "./code/code_3.js",
+      "name": "Transformation3",
+      "description": "Description 3",
+      "language": "javascript",
+      "test-input-file": "./code/events.json",
+      "expected-output": "./code/expected.json"
     }
   ],
   "libraries": [
