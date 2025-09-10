@@ -9,5 +9,6 @@ export function transformEvent(event, metadata) {
     city: getCity(event.context?.traits?.address || {}),
     country: getCountry(event.context?.traits?.address || {}),
     street: getStreet(event.context?.traits?.address || {}),
+    
   };
 }
