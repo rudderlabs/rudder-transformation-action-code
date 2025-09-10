@@ -43,7 +43,7 @@ This is the actual action as defined [here](https://github.com/marketplace/actio
         uses: rudderlabs/rudder-transformation-action@1.0.0
         with:
           metaPath: './code/meta.json'
-          email: 'siva.shanmukh@rudderstack.com'
+          email: 'email@yourcompany.com'
           accessToken: ${{ secrets.ACCESS_TOKEN }}
           uploadTestArtifact: true
 ```
