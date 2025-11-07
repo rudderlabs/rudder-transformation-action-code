@@ -15,15 +15,15 @@ jobs:
       TEST_ONLY: ${{ github.event_name != 'push' }}
     steps:
       - name: Harden the runner (Audit all outbound calls)
-        uses: step-security/harden-runner@v2
+        uses: step-security/harden-runner@95d9a5deda9de15063e7595e9719c11c38c90ae2 # v2.13.2
         with:
           egress-policy: audit
 
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2.7.0
         with:
           ref: ${{ github.ref }}
       - name: Rudder Transformation Action
-        uses: rudderlabs/rudder-transformation-action@1.1.0
+        uses: rudderlabs/rudder-transformation-action@7355ce0d2809929ec581b254e9f9c61a41f6c206 # 1.1.0
         with:
           metaPath: './code/meta.json'
           email: 'siva.shanmukh@rudderstack.com'
